@@ -12,6 +12,11 @@ library(shiny)
 # Define UI for application that draws a histogram
 ui <- fluidPage(
 
+    tags$head(includeHTML(("g_analytics.html"))),  
+    
+  
+      
+    
     # Application title
     titlePanel("Old Faithful Geyser Data"),
 
