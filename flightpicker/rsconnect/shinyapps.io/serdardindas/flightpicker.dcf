@@ -5,9 +5,9 @@ account: serdardindas
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7631572
-bundleId: 6516124
+bundleId: 6529212
 url: https://serdardindas.shinyapps.io/flightpicker/
-when: 1668518151.71577
-lastSyncTime: 1668518151.71577
+when: 1668720003.86727
+lastSyncTime: 1668720003.86727
 asMultiple: FALSE
 asStatic: FALSE

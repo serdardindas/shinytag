@@ -14,40 +14,36 @@ ui <- fluidPage(
 
     tags$head(includeHTML(("g_analytics.html"))),  
     
-  
+    includeCSS("mainstyle.css"), #CSS StyleSheet
       
-    
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-           plotOutput("distPlot")
-        )
-    )
+    fluidRow(class="mainPanel",
+      fluidRow(class="sideleft"),
+      fluidRow(class="sideright"),
+      fluidRow(class="hd"),  
+      fluidRow(class="bt"),
+      fluidRow(class="destfrom",
+               textInput("destinationfrom",label=NULL, value="Enter Text...")
+              ),
+      fluidRow(class="destto",
+               textInput("destinationto",label=NULL, value="Enter Text...")
+              ),
+      fluidRow(class="date",
+               dateInput("flightdate", label=NULL, value="2023-01-01")
+               ),
+      fluidRow(class="pass",
+               textInput("passanger",label=NULL, value="Enter Text...")
+               ),
+      fluidRow(class="check",
+               actionButton("action", label="Check Flights"))
+    ) #fluidRow
 )
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
 
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
-    })
+    output$value <- renderPrint({input$destinationfrom})
+  
+  
 }
 
 # Run the application 
