@@ -14,9 +14,15 @@ ui <- fluidPage(
 
     tags$head(includeHTML(("g_analytics.html"))),  
     
+    tags$head(includeHTML(("g_taghead.html"))),  
+    
     includeCSS("mainstyle.css"), #CSS StyleSheet
+    
+    tags$body(includeHTML(("g_tagbody.html"))),   
       
     fluidRow(class="mainPanel",
+    
+    
       fluidRow(class="sideleft"),
       fluidRow(class="sideright"),
       fluidRow(class="hd"),  
