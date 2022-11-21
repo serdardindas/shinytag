@@ -2,33 +2,37 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  height: 600px;
+  height: 400px;
   padding-top: 10px;
 }
 
 .sideleft{
   grid-column: 1/2;
   grid-row: 1/5;
-  background-color: yellow;
+  background-color: transparent;
 }
 
 .sideright{
   grid-column: 7/8;
   grid-row: 1/5;
-  background-color: yellow;
+  background-color: transparent;
 }
 
 
 .hd{
   grid-column: 2/7;
   grid-row: 1/2;
-  background-color: yellow;
+  background-color: transparent;
+}
+
+.hd img{
+ padding-left: 200px;
 }
 
 .bt{
   grid-column: 2/7;
   grid-row: 3/5;
-  background-color: yellow;
+  background-color: transparent;
 }
 
 
@@ -36,46 +40,68 @@
   display: grid;
   grid-column: 2/3;
   grid-row: 2/3;
-  background-color: purple;
+  background-color: transparent;
   justify-content: center;
   align-content: center;
-  padding: 0px 5px;
+  padding: 15px 5px 0px;
+  
+}
+
+.fromtext{
+  font-weight: bold;
 }
 
 .destto{
   display: grid;
   grid-column: 3/4;
   grid-row: 2/3;
-  background-color: green;
+  background-color: transparent;
   justify-content: center;
   align-content: center;
+  padding: 15px 5px 0px;
+}
+
+.totext{
+  font-weight: bold;
 }
 
 .date{
   display: grid;
   grid-column: 4/5;
   grid-row: 2/3;
-  background-color: darkgreen;
+  background-color: transparent;
   justify-content: center;
   align-content: center;
+  padding: 0px 5px;
+}
+
+.datetext{
+  font-weight: bold;
 }
 
 .pass{
   display: grid;
   grid-column: 5/6;
   grid-row: 2/3;
-  background-color: grey;
+  background-color: transparent;
   justify-content: center;
   align-content: center;
+  padding: 0px 5px;
+}
+
+.passtext{
+  font-weight: bold;
 }
 
 .check{
   display: grid;
   grid-column: 6/7;
   grid-row: 2/3;
-  background-color: orange;
+  background-color: transparent;
   justify-content: center;
   align-content: center;
+  padding-top: 5px;
+  padding-left: 0px;
 }
 
 

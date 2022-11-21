@@ -25,19 +25,33 @@ ui <- fluidPage(
     
       fluidRow(class="sideleft"),
       fluidRow(class="sideright"),
-      fluidRow(class="hd"),  
-      fluidRow(class="bt"),
+      fluidRow(class="hd",
+               tags$img(src="topflight.png")
+               ),  
+      fluidRow(class="bt",
+               tags$img(src="bottomflight.png")
+               ),
       fluidRow(class="destfrom",
-               textInput("destinationfrom",label=NULL, value="Enter Text...")
+               div(class="fromtext", 'FROM'),
+               #textInput("destinationfrom",label=NULL, value="Enter Text...")
+               selectInput("fromselect", label=NULL,
+                           choices = list("","Ankara","Istanbul","Izmir"))
+          
               ),
       fluidRow(class="destto",
-               textInput("destinationto",label=NULL, value="Enter Text...")
+               div(class="totext", 'TO'),
+               #textInput("destinationto",label=NULL, value="Enter Text...")
+               selectInput("toselect", label=NULL,
+                           choices = list("","London","Paris","Tokyo"))
               ),
       fluidRow(class="date",
-               dateInput("flightdate", label=NULL, value="2023-01-01")
+               div(class="datetext", 'FLIGHT DATE'),
+               dateInput("flightdate", label=NULL, value=" ")
                ),
       fluidRow(class="pass",
-               textInput("passanger",label=NULL, value="Enter Text...")
+               div(class="passtext", 'PASSENGER/S'),
+               #textInput("passanger",label=NULL, value="Enter Text...")
+               numericInput("passcount", label=NULL, value=1)
                ),
       fluidRow(class="check",
                actionButton("action", label="Check Flights"))
